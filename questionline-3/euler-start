@@ -1,1 +1,28 @@
+#project euler problem 1
+s=[]
+for i in range(0,1000):
+      if i%5==0 or i%3==0:
+            s.append(i)
+p=0
+for j in s:
+      p=p+j
+print(p)
 
+#Project euler problem 2
+l=[1,2]
+n=int(input("ENter the limit:"))
+a=1
+b=2
+print(a)
+print(b)
+for i in range(3,n+1):
+      c=a+b
+      l.append(c)
+      print(c)
+      a=b
+      b=c
+s=0
+for j in l:
+      if j%2==0:
+            s=s+j
+print("Sum of all even numbers in a fibonacci series:",s)
