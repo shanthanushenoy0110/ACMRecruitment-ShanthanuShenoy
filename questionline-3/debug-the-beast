@@ -1,5 +1,3 @@
-
-
 def second_largest(arr):      
       largest=second=float("-inf")
       if len(arr)<=1:
@@ -19,5 +17,13 @@ def second_largest(arr):
             else:
                   return second
 arr = list(map(int, input("Enter numbers: ").split()))
-
 print("Second largest:", second_largest(arr))
+
+
+EXPLANATION TO THE PROBLEM
+
+Here I have changed -99999 to float(“-inf”) which represents negative infinity so that if a value like -1000000 comes it may not skip it .
+Second is I have added some if else constrains which will check the list contains no elements or contains only one element or all the elements are same.
+Also I have added i !=largest constrain which will help  in finding out the second largest number as we are checking that the number is not bigger than the largest number.
+
+
