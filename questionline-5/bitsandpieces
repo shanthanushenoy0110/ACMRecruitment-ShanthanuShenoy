@@ -1,1 +1,65 @@
+#Problem-1
+#Converting binary to decimal and then to hexadecimal 
+n=int(input("Enter the binary number:"))
+c=str(n)
+s=0
+y=c[::-1]
+for i in range(len(y)):
+      f=(2**i)*int(y[i])
+      s=s+f
+print("Decimal representation of given binary number:",s)
+t=""
+while s>0:
+      rm=s%16 
+      if rm<=9:
+            t=t+str(rm)
+      else:
+            if rm==10:
+                  t=t+"A"
+            elif rm==11:
+                  t=t+"B"
+            elif rm==12:
+                  t=t+"C"
+            elif rm==13:
+                  t=t+"D"
+            elif rm==14:
+                  t=t+"E"
+            elif rm==15:
+                  t=t+"F"
+      s=s//16
+print("Hexadecimal representation of given binary number:",t[::-1])
+
+
+#Problem-2
+#Converting decimal to binary and hexadecimal
+n=int(input("Enter the decimal number:"))
+h=' '
+while n>0:
+      rem=n%2
+      h=h+str(rem)
+      n=n//2
+f=int(h)
+print("Binary for of",n,"is:",f)
+t=""
+while f>0:
+      rm=f%16 
+      if rm<=9:
+            t=t+str(rm)
+      else:
+            if rm==10:
+                  t=t+"A"
+            elif rm==11:
+                  t=t+"B"
+            elif rm==12:
+                  t=t+"C"
+            elif rm==13:
+                  t=t+"D"
+            elif rm==14:
+                  t=t+"E"
+            elif rm==15:
+                  t=t+"F"
+      f=f//16
+print("Hexadecimal for of",n,"is:",t[::-1])
+
+
 
