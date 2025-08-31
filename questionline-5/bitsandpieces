@@ -1,7 +1,7 @@
 #Problem-1
 #Converting binary to decimal and then to hexadecimal 
-n=int(input("Enter the binary number:"))
-c=str(n)
+num=int(input("Enter the binary number:"))
+c=str(num)
 s=0
 y=c[::-1]
 for i in range(len(y)):
@@ -33,33 +33,37 @@ print("Hexadecimal representation of given binary number:",t[::-1])
 #Problem-2
 #Converting decimal to binary and hexadecimal
 n=int(input("Enter the decimal number:"))
-h=' '
+a=n
+h=""
 while n>0:
       rem=n%2
       h=h+str(rem)
       n=n//2
-f=int(h)
-print("Binary for of",n,"is:",f)
-t=""
-while f>0:
-      rm=f%16 
-      if rm<=9:
-            t=t+str(rm)
+f=int(h[::-1])
+print("Binary for of given decimal number is:",f)
+p=""
+while a>0:
+      rem=a%16 
+      if rem<=9:
+            p=p+str(rem)
       else:
-            if rm==10:
-                  t=t+"A"
-            elif rm==11:
-                  t=t+"B"
-            elif rm==12:
-                  t=t+"C"
-            elif rm==13:
-                  t=t+"D"
-            elif rm==14:
-                  t=t+"E"
-            elif rm==15:
-                  t=t+"F"
-      f=f//16
-print("Hexadecimal for of",n,"is:",t[::-1])
+            if rem==10:
+                  p=p+"A"
+            elif rem==11:
+                  p=p+"B"
+            elif rem==12:
+                  p=p+"C"
+            elif rem==13:
+                  p=p+"D"
+            elif rem==14:
+                  p=p+"E"
+            elif rem==15:
+                  p=p+"F"
+      a=a//16
+print("Hexadecimal for of given decimal number is:",p[::-1])
+
+
+
 
 
 
