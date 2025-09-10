@@ -1,1 +1,6 @@
+The next two terms in the pattern are 30 and 42.
+This can be understood by seeing the difference between two cincecutive terms which increases by 2.
 
+2       6       12       20       30        42
+|       |        |        |        |         |
+-> +4 ->  ->+6 ->  ->+8 ->  ->+10 ->  ->+12 ->
